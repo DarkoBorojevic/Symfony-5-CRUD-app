@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 08, 2021 at 11:19 AM
+-- Generation Time: Sep 08, 2021 at 04:23 PM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 7.4.16
 
@@ -63,7 +63,9 @@ INSERT INTO `task` (`id`, `name`, `status`, `author`) VALUES
 (3, 'read a book', 0, 'johndoe@name.com'),
 (4, 'go to school', 0, 'johndoe@name.com'),
 (5, 'send messages', 1, 'johndoe@name.com'),
-(6, 'go to bank', 0, 'johndoe@name.com');
+(6, 'go to bank', 0, 'johndoe@name.com'),
+(7, 'write an article', 0, 'johndoe@name.com'),
+(8, 'go to work', 0, 'johndoe@name.com');
 
 --
 -- Indexes for dumped tables
