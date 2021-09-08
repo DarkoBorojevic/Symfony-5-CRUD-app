@@ -46,7 +46,15 @@ class TodoController extends AbstractController
 
         $objectManager = $this->getDoctrine()->getManager();
 
+        $lastTask = $objectManager->getRepository(Task::class)->findOneBy([], ['id' => 'desc']);
+
+        $lastId = $lastTask->getId();
+
+        $newId = $lastId + 1;
+
         $task = new Task;
+
+        $task->setId($newId);
 
         $task->setName($name);
 
