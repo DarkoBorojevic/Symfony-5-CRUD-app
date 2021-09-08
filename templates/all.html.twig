@@ -27,6 +27,19 @@
                 {% endfor %}
             </ul>
         </div>
+
+        <br>
+
+        <div class="col-md-6 offset-md-3 col-xs-12">
+            <nav aria-label="Pagination">
+                <ul class="pagination">
+
+                    {{ knp_pagination_render(tasks) }}
+
+                </ul>
+            </nav>
+        </div>
+
     </div>
 
 {% endblock %}

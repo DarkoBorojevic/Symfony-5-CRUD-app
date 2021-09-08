@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Task;
+use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -26,11 +27,13 @@ class TodoController extends AbstractController
     /**
      * @Route("/all", name="all")
      */
-    public function all(): Response
+    public function all(Request $request, PaginatorInterface $paginator): Response
     {
         $tasks = $this->getDoctrine()->getRepository(Task::class)->findBy([],['id'=>'DESC']);
 
-        return $this->render('all.html.twig', ['tasks' => $tasks]);
+        $paginatedTasks = $paginator->paginate($tasks, $request->query->getInt('page', 1), 5);
+
+        return $this->render('all.html.twig', ['tasks' => $paginatedTasks]);
     }
 
     /**
