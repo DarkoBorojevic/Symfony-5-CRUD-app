@@ -1,1 +1,5 @@
 # Symfony-5-CRUD-app
+This is a sample Symfony-5 CRUD web application with a Bootstrap-5 frontend design features. It demonstrates the basics of Symfony eco system like Doctrine ORM, annotations, MVC pattern and Twig templates in action. 
+
+## How to use?
+You have to understand the basics of Symfony-5 if you want to use this template, so this is not a Symfony or PHP basics tutorial. Please have that in mind and learn OOP Php, Composer manager, and Symfony framework basics first before you download or clone this repository. This is a classic Symfony installation that was set in motion with <code>composer create-project symfony/skeleton nameOfProject</code> command, with Annotations and Twig packages installed via composer. I also use an Apache web server here - with XAMPP, instead of in-built symfony server that runs with <code>symfony server:start</code> command. If your Symfony server does not run, try to google it and find out if you have all required Php extensions installed to run this server. If you are using XAMPP like me, just start XAMPP, and navigate to your project/public folder and that's it. I didn't use virtual hosts or anything like that.
