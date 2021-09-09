@@ -69,6 +69,8 @@ class TodoController extends AbstractController
 
         $objectManager->flush();
 
+        $this->addFlash('success', 'You have created a new task!');
+
         return $this->redirectToRoute('all');
 
     }
@@ -86,6 +88,8 @@ class TodoController extends AbstractController
 
         $objectManager->flush();
 
+        $this->addFlash('info', 'You have updated a task!');
+
         return $this->redirectToRoute('all');
 
     }
@@ -100,6 +104,8 @@ class TodoController extends AbstractController
         $objectManager->remove($id);
 
         $objectManager->flush();
+
+        $this->addFlash('danger', 'You have deleted a task!');
 
         return $this->redirectToRoute('all');
 
